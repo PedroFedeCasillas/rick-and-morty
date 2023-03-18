@@ -1,0 +1,26 @@
+.contenedorNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fe3e;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border: 5px solid #000;
+  }
+  
+  h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  h3:hover {
+    color: #ff7f50;
+  }
+  
+  
+  

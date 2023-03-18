@@ -1,0 +1,9 @@
+.contenedorAbout{
+    background-color: blueviolet;
+    display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-end;
+align-items: stretch;
+align-content: flex-start;
+}

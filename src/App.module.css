@@ -1,0 +1,16 @@
+.nav{
+ background-color: transparent;
+  color: #fff;
+   padding: 1em;
+   margin-left: 3em;
+   margin-right: 3em;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-bottom: 1em;
+   border-radius: 8px;
+   
+}
+ 
+
+ 

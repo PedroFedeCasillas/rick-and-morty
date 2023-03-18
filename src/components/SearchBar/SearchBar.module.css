@@ -1,0 +1,24 @@
+.bar{
+    position: absolute; /* Establecer la posición de la barra como absoluta */
+    top: 10; /* Alinear la barra en la parte superior del contenedor */
+    right: 250px; /* Alinear la barra en el lado derecho del contenedor */
+    width: 100px; /* Establecer el ancho de la barra */
+    height: 30px; /* Establecer la altura de la barra */
+    background-color: blue;
+    
+}
+
+.searchInput{
+    border: 0px;
+    border-radius: 15px 0px 0px 15px;
+    height: 3em; 
+    
+}
+
+.searchButton{
+    border: 0px;
+    border-radius:0px 15px 15px 0px;
+    height: 3em;
+    
+}
+
