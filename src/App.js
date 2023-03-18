@@ -9,6 +9,7 @@ import Form from "./components/Form/Form";
 import Favirites from "./components/Favorites/Favorites"
 import Favorites from "./components/Favorites/Favorites";
 
+console.log("esta es una modificacion");
 function App() {
   // ! HOOKS
   const [characters, setCharacters] = useState([]);
