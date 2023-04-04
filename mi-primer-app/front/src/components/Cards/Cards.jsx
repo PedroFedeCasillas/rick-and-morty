@@ -1,15 +1,22 @@
 import Card from "../Card/Card";
-import { CardsContainer } from "./styledComponents";
+import style from "./Cards.module.css";
+import { useDispatch } from "react-redux";
+import { getFavorites } from "../../redux/actions";
+import { useEffect } from "react";
 
 export default function Cards({ characters, onClose }) {
-  
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getFavorites());
+  }, []);
   return (
-    <CardsContainer>
-      {characters.map(({id, name, species, gender, image }) => {
+    <div className={style.containerCards}>
+      {characters.map(({ id, name, species, gender, image }) => {
         return (
           <Card
-          key={id}
-           id={id}
+            key={id}
+            id={id}
             name={name}
             species={species}
             gender={gender}
@@ -18,6 +25,6 @@ export default function Cards({ characters, onClose }) {
           />
         );
       })}
-    </CardsContainer>
+    </div>
   );
 }

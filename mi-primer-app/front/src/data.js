@@ -1,10 +1,10 @@
 const characters = [
   {
     id: 1,
-  name: "Rick Sanchez",
-  species: "Human",
-  gender: "Male",
-  image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    name: "Rick Sanchez",
+    species: "Human",
+    gender: "Male",
+    image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
   },
   {
     id: 2,
@@ -29,6 +29,7 @@ const characters = [
   },
 ];
 
-
-
 export default characters;
+
+// con los exports => arma un objeto con todo lo que esté haciendo export => {Rick}
+// el export default se exporta solito aparte => characters

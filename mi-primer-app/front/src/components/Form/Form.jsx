@@ -1,6 +1,6 @@
-import style from "./Form.module.css";
 import { useState } from "react";
 import validation from "./validation";
+import style from "./Form.module.css";
 
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
@@ -27,38 +27,40 @@ const Form = ({ login }) => {
   };
 
   return (
-       
-    <form className={style.contenedorform} onSubmit={submitHandler}>
-
-      <h4>Formulario Registro</h4>
-
-      <div >
-        <label htmlFor="username"></label>
+    <div className={style.contenedorform}>
+     <h4>Login</h4>
+    <form onSubmit={submitHandler} className={style.form}>
+    
+      <div className={style.divcontainer}>
+        <label htmlFor="username" >Username</label>
         <input
-          className={style.controls}
           type="text"
           name="username"
           value={userData.username}
           onChange={handleInputChange}
-          placeholder="Ingrese su Email"
+          placeholder=""
         />
         <p>{errors.username}</p>
       </div>
-
-      <div >
-        <label htmlFor="password"></label>
+      <div className={style.divcontainer}>
+        <label htmlFor="password">Password</label>
         <input
-        className={style.controls}
           type="text"
           name="password"
           value={userData.password}
           onChange={handleInputChange}
-          placeholder="Ingrese su Contraseña"
+          placeholder=""
         />
       </div>
-      <button className={style.botons} type="submit">LOGIN</button>
+      <button className={style.botons} type="submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        INGRESAR
+      </button>
     </form>
-    
+    </div>
   );
 };
 

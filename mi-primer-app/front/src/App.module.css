@@ -1,16 +1,8 @@
-.nav{
- background-color: transparent;
-  color: #fff;
-   padding: 1em;
-   margin-left: 3em;
-   margin-right: 3em;
+.App {
+   text-align: center;
+  background-color: red;
+   min-height: 100vh;
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    justify-content: center;
-   margin-bottom: 1em;
-   border-radius: 8px;
-   
-}
- 
-
- 
+ }

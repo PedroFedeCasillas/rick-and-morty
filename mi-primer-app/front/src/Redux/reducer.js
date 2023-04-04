@@ -1,47 +1,49 @@
-import { ADD_FAVORITE, REMOVE_FAVORITE, FILTER, ORDER} from "./actions";
-
+import {
+  ADD_FAVORITE,
+  CLEAN_DETAIL,
+  GET_CHARACTER_DETAIL,
+  GET_FAVORITES,
+  REMOVE_FAVORITE,
+} from "./actions";
 
 const initialState = {
-    myFavorites: [],
-    allCharacters: []
+  myFavorites: [],
+  characterDetail: {},
 };
 
 const rootReducer = (state = initialState, action) => {
-    switch (action.type){
-        case ADD_FAVORITE:
-            return {
-                ...state, 
-                myFavorites: [...state.myFavorites, action.payload],
-                allCharacters: [...state.allCharacters, action.payload]
-            };
+  switch (action.type) {
+    case ADD_FAVORITE:
+      return {
+        ...state,
+        myFavorites: [...state.myFavorites, action.payload],
+      };
 
-        case REMOVE_FAVORITE:
-            return {
-                ...state, 
-                myFavorites: state.myFavorites.filter((char) => char.id !== action.payload),
-                allCharacters: state.allCharacters.filter((char) => char.id !== action.payload)
-            };
+    case REMOVE_FAVORITE:
+      return {
+        ...state,
+        myFavorites: state.myFavorites.filter(
+          (char) => char.id !== action.payload
+        ),
+      };
+    case GET_CHARACTER_DETAIL:
+      return {
+        ...state,
+        characterDetail: action.payload,
+      };
 
-        case FILTER:
-            return {
-                ...state,
-                myFavorites: state.allCharacters.filter((char) => char.gender === action.payload)
-            };
-        case ORDER:
-                let sortedChars = [...state.allCharacters];
-                if (action.payload === 'Ascendente') {
-                sortedChars.sort((a, b) => a.id - b.id);
-                } else if (action.payload === 'Descendente') {
-                sortedChars.sort((a, b) => b.id - a.id);
-            }
-            return {
-                ...state,
-                myFavorites: sortedChars
-            };
+    case CLEAN_DETAIL:
+      return {
+        ...state,
+        characterDetail: {},
+      };
 
-        default:
-            return {...state};
-    }
+    case GET_FAVORITES:
+      return { ...state, myFavorites: action.payload };
+
+    default:
+      return { ...state };
+  }
 };
 
 export default rootReducer;

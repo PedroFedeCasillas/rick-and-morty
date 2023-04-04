@@ -1,0 +1,12 @@
+favConten{
+    background-color: red;
+    display: inline-block;
+}
+.divCard{
+    padding: 10px;
+    width: 23%;
+    overflow: hidden;
+    float: left;
+   
+   
+}

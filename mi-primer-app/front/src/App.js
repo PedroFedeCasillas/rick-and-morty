@@ -1,45 +1,39 @@
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import style from "./App.module.css";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Form/Form";
-import Favorites from "./components/Favorites/Favorites";
+import Favorites from "./components/Favorites/Favorites.jsx";
+import { username, password } from "./utils/consts.js";
+import style from "styled-components";
 
-console.log("esta es una modificacion");
 function App() {
   // ! HOOKS
   const [characters, setCharacters] = useState([]);
-  const { pathname} = useLocation();
+  const { pathname } = useLocation();
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
-
 
   useEffect(() => {
     !access && navigate("/");
   }, [access]);
 
-  // ! CREDENCIALES FAKE
-  const username = "pedrofedecasillas2@gmail.com";
-  const password = "mipass123";
-
   // ! EVENT HANDLERS
   const onSearch = (id) => {
-    const URL_BASE = "https://localhost:3001/rickandmorty";
-    //const KEY = "25144cbaace6.86f8cd47dfc7be7cd54c";
+    const URL_BASE = "http://localhost:3001";
+    // const KEY = "2d0fd52418f5.d3d6077a3b4c1857914f";
 
     if (characters.find((char) => char.id === id)) {
       return alert("Personaje repetido");
     }
 
-    fetch(`${URL_BASE}/character/${id}`)
+    fetch(`${URL_BASE}/onsearch/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        if (data.name){  //&& !characters.find((char) => char.id === data.id)) {
+        if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
-          
         } else {
           alert("Algo salió mal");
         }
@@ -51,23 +45,20 @@ function App() {
     setCharacters(characters.filter((char) => char.id !== id));
   };
 
-
-  const login = (userData) =>{
-    if(userData.username === username && userData.password === password){
+  const login = (userData) => {
+    if (userData.username === username && userData.password === password) {
       setAccess(true);
       navigate("/home");
-    }else{
-      alert("Credencial incorrecto");
+    } else {
+      alert("Credenciales incorrectas");
     }
   };
 
   // ! RENDER
   return (
-    <div className={style.nav} >
+    <div className={style.App}>
       {pathname !== "/" && <Nav onSearch={onSearch} />}
-      
-      
-        <Routes>
+      <Routes>
         <Route path="/" element={<Form login={login} />} />
         <Route
           path="/home"
@@ -76,13 +67,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/detail/:detailId" element={<Detail />} />
-
-        </Routes>
-      
-     
+      </Routes>
     </div>
   );
 }
 
 export default App;
-

@@ -1,4 +1,26 @@
-.contenedorDetail{
-background-color: #ccc;
-color: #000;
+.detailConten{
+    color: #40aec4;
+    background-color: #141d2e;
+    border: 1px solid #20224a;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    max-width: 300px;
+    left: 500px;
+    position: relative;
+    text-shadow: -3px 7px 6px rgba(0,0,0,0.61);
+    box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
+  -webkit-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
+  -moz-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
+  transition: transform 0.3s ease;
 }
+
+.detailConten:hover {
+    transform: scale(1.05); /* escala la imagen en un 10% */
+    z-index: 1; /* mueve la imagen al frente */
+  }
+
+  .imgDetail{
+    border-radius: 10px;
+  }

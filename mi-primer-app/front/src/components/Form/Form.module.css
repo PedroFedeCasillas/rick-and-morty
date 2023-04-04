@@ -1,73 +1,170 @@
-.contenedorform{
-   background-color: transparent;
-   width: 500px;
-   padding: 30px;
-   margin: auto;
-   margin-top: 100px;
-   border-radius: 5px;
-   color: #40aec4;
+.contenedorform {
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border-radius: 10px;
   text-shadow: -5px 8px 5px rgba(0,0,0,0.61);
   box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
   -webkit-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
   -moz-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
   transition: transform 0.3s ease;
-
+  font-family: Comic Sans MS;
+  background: linear-gradient(#141e30, #243b55);
 }
 
-.contenedorform:hover {
-    transform: scale(1.1); /* escala la imagen en un 10% */
-    z-index: 1; /* mueve la imagen al frente */
-  }
+
 
 h4 {
-    font-size: 29px;
-    font-family: 'calibri';
-  }
+  font-size: 30px;
+  margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+ }
 
-label{
-    font-size: 28px;
-    font-family: 'calibri';
-    text-shadow: -4px 7px 8px rgba(0,0,0,0.88);
+ .contenedorform .divcontainer{
+  position: relative;
+ }
+
+
+.contenedorform .divcontainer input{
+  width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
 }
 
-
-.controls{
-    width: 80%;
-    background: #addfed;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: #000;
-   
-    box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
-  -webkit-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
-  -moz-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
+.contenedorform .divcontainer label{
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
 }
 
-.botons {
-    width: 85%;
-    background: #1f53c5;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    border-radius: 5px;
-    text-shadow: -4px 7px 8px rgba(0,0,0,0.88);
-    box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
-  -webkit-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
-  -moz-box-shadow: 6px 7px 19px 3px rgba(30,143,148,1);
-  }
-  
-  
-  .botons:hover {
-    background-color: #0062cc;
-    color: #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1);
-  }
-  
+.contenedorform .divcontainer input:focus~label,
+.contenedorform .divcontainer input:valid~label{
+	top: -20px;
+	left: 0;
+	color: #03e9f4;
+	font-size: 12px;
+}
+
+.contenedorform .form .botons {
+  position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #03e9f4;
+	font-size: 16px;
+	text-decoration: none;
+	overflow: hidden;
+	transition: .5s;
+	margin-top: 40px;
+	letter-spacing: 4px;
+  border: none;
+  background: transparent;
+ }
+ 
+ 
+ .contenedorform .botons:hover {
+  background: #03e9f4;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #03e9f4,
+	            0 0 25px #03e9f4,
+	            0 0 50px #03e9f4,
+	            0 0 100px #03e9f4
+ }
+
+ .contenedorform .botons span{
+	position: absolute;
+	display: block;
+}
+
+.contenedorform .botons span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #03e9f4);
+	animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1{
+	0%{
+		left: -100%;
+	}
+	50%, 100% {
+		left: 100%;
+	}
+}
+
+.contenedorform .botons span:nth-child(2){
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03e9f4);
+	animation: btn-anim2 1s linear infinite;
+	animation-delay: 5s;
+}
+
+@keyframes btn-anim2{
+	0%{
+		top: -100%;
+	}
+	50%, 100% {
+		top: 100%;
+	}
+}
+
+.contenedorform .botons span:nth-child(3){
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03e9f4);
+	animation: btn-anim3 1s linear infinite;
+	animation-delay: 3s;
+}
+
+@keyframes btn-anim3{
+	0%{
+		right: -100%;
+	}
+	50%, 100% {
+		right: 100%;
+	}
+}
+
+.contenedorform .botons span:nth-child(4){
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: btn-anim4 1s linear infinite;
+	animation-delay: 7s;
+}
+
+@keyframes btn-anim4{
+	0%{
+		bottom: -100%;
+	}
+	50%, 100% {
+		bottom: 100%;
+	}
+}
   
