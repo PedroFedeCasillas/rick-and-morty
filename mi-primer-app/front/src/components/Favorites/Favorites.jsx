@@ -2,14 +2,19 @@ import style from "./Favorites.module.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../Card/Card";
-import { getFavorites } from "../../redux/actions";
+import { getFavorites } from "../../Redux/actions";
 
-const Favorites = () => {
-  const favorites = useSelector((state) => state.myFavorites);
+function Favorites() {
+  const dispatch = useDispatch();
+  const myFavorites = useSelector((state) => state.myFavorites);
+  const idUser = useSelector((state) => state.idUser);
+  useEffect(() => {
+    dispatch(getFavorites(idUser));
+  }, []);
 
   return (
     <div className={style.favConten}>
-      {favorites.map(({ id, name, species, gender, image }) => {
+      {myFavorites.map(({ id, name, species, gender, image }) => {
         return (
           <div className={style.divCard}>
             <Card

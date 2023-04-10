@@ -1,0 +1,11 @@
+.selector{
+    background: red;
+    background-color: rgba(0, 0, 0, 0);
+    padding:1em;
+    font-size: 1em;
+    font-weight: bolder;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    color:rgb(253, 216, 2);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}

@@ -23,7 +23,7 @@ function App() {
   // ! EVENT HANDLERS
   const onSearch = (id) => {
     const URL_BASE = "http://localhost:3001";
-    // const KEY = "2d0fd52418f5.d3d6077a3b4c1857914f";
+    // const KEY = "25144cbaace6.86f8cd47dfc7be7cd54c";
 
     if (characters.find((char) => char.id === id)) {
       return alert("Personaje repetido");

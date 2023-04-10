@@ -1,18 +1,26 @@
-const axios = require("axios");
-const { KEY, URL } = process.env;
+require('dotenv').config();
+const axios = require('axios');
 
-const getCharDetail = (req, res) => {
-  const { id } = req.params;
+const { URL, KEY } = process.env;
 
-  axios
-    .get(`${URL}/character/${id}?key=${KEY}`)
-    .then((response) => {
-      const { id, name, species, image, gender, origin } = response.data;
-      res.status(200).json({ id, name, species, image, gender, origin });
-    })
-    .catch((error) => {
-      res.status(500).json({ error: error.message });
-    });
-};
+const getCharDetail = async (req, res) => {
+    
+    try {
+        const { id } = req.params;
+        const response = await axios.get(`${URL}/character/${id}?key=${KEY}`)
+
+        const obj = {
+            id: response.data.id,
+            name: response.data.name,
+            species: response.data.species,
+            image: response.data.image,
+            gender: response.data.gender,
+            origin: response.data.origin
+        }
+        res.status(200).json(obj);
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
+}
 
 module.exports = getCharDetail;

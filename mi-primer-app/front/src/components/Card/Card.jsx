@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 import { connect, useDispatch } from "react-redux";
-import { removeFavorite, getFavorites } from "../../redux/actions";
+import { removeFavorite, getFavorites } from "../../Redux/actions";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import React from "react";

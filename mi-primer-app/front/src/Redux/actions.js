@@ -29,3 +29,5 @@ export const getFavorites = () => {
 export const cleanDetail = () => {
   return { type: CLEAN_DETAIL };
 };
+
+

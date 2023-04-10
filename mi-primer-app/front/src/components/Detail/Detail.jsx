@@ -9,11 +9,11 @@ const Detail = () => {
       {character.name ? (
         <>          
           <img src={character.image} alt="img" className={style.imgDetail}/>
-          <h2>{character.name}</h2>
-          <p>{character.status}</p>
-          <p>{character.species}</p>
-          <p>{character.gender}</p>
-          <p>{character.origin?.name}</p>
+          <h2>Nombre: {character.name}</h2>
+          <p>Estado: {character.status}</p>
+          <p>Especie: {character.species}</p>
+          <p>Género: {character.gender}</p>
+          <p>Origen: {character.origin?.name}</p>
         </>
       ) : (
         <h3>Loading...</h3>

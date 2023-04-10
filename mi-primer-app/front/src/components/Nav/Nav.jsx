@@ -21,6 +21,9 @@ class Nav extends React.Component {
         <Link to="/favorites">
           <h3>FAVORITES</h3>
         </Link>
+
+         
+
       </div>
     );
   }
