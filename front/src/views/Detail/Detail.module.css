@@ -1,5 +1,4 @@
 .divDetail {
-  /* background-color: rgba(66, 15, 68, 0.5); */
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.507);
   color: white;
@@ -32,10 +31,9 @@
 
 .divDetail .divText .divButton {
   width: 100%;
-  display: flex;
-  justify-content: start;
   margin-bottom: 30px;
 }
+
 .divDetail .divText .divButton .button {
   background-color: #003a4c;
   color: aliceblue;

@@ -13,7 +13,7 @@
   border-radius: 20px;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -26,7 +26,7 @@
   position: relative;
   border-radius: 20px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .active {
   background-color: #141d2e;
@@ -53,11 +53,8 @@
   color:#fff;
 }
 .btnLogout {
-  /* position: relative; */
   display: flex;
   align-items: center;
-  /* right: 80px;
-  top: 27px; */
   margin-right: 20px;
   width: fit-content;
   height: fit-content;
@@ -67,6 +64,7 @@
 }
 .btnLogout button {
   display: flex;
+  justify-content: flex-end;
   color: white;
   background-color: #141d2e;
   border: transparent;
@@ -99,18 +97,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     width: 70%;
     height: 67px;
   }
 
   .nav .divLinks {
-    /* border: 1px solid red; */
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 50%; */
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -126,7 +122,7 @@
     margin: 0;
     border-radius: 20px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   .divNavSearch .btnLogout {
     position: absolute;
@@ -189,7 +185,6 @@
 @media screen and (max-width: 450px) {
   .nav {
     width: 100vh;
-    /* background: none; */
     border: none;
   }
   .active {

@@ -1,8 +1,7 @@
 .divSearchBar {
-  /* border: 1px solid green; */
   width: 250px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -18,7 +17,6 @@
   border: 1px solid rgba(30,143,148,1);
 
   border-radius: 10px 0 0 10px;
-  /* margin: 30px 0px 30px 0px; */
   transition: all 0.2s easy;
   text-align: center;
 }
