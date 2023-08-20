@@ -1,0 +1,136 @@
+.divAbout {
+  min-width: 70%;
+  max-width: 70%;
+  margin-bottom: 30PX;
+  background-color: rgba(0, 0, 0, 0.507);
+  color: #40aec4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+  z-index: 0;
+}
+
+.divAbout .divText {
+  width: 400px;
+  font-size: 20px;
+  font-family: "Rampart One", cursive;
+  text-align: center;
+  font-size: 18px;
+}
+.divAbout .divText p {
+  font-family: "Poiret One", cursive;
+  margin: 5px;
+}
+
+.image {
+  border-radius: 15px;
+  width: 280px;
+  margin-right: 25px;
+}
+
+
+/*=====>>>loading<<<=====*/
+.divLoader {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 270px;
+}
+
+.loader {
+  border: 6px solid #40aec4;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.loader {
+  border: 6px solid #40aec4;
+  border-left-color: transparent;
+  width: 100px;
+  height: 100px;
+}
+
+.loader {
+  border: 6px solid #40aec4;
+  border-left-color: transparent;
+  width: 100px;
+  height: 100px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*=====>>>hasta acá loading<<<=====*/
+
+@media screen and (max-width: 1050px) {
+  .divAbout {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+  }
+  .image {
+    margin: 30px 30px 10px 30px;
+    width: 280px;
+    height: 280px;
+
+  }
+  .divText {
+    /* font-size: 10px; */
+    margin-bottom: 30px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .divText h1 {
+    font-size: 32px;
+  }
+  .image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .divAbout .divText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    text-align: center;
+
+  }
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+  .divText h1 {
+    font-size: 23px;
+  }
+  .divText h3 {
+    font-size: 20px;
+  }
+  .divText p {
+    /* border: 1px solid green; */
+    width:250px;
+    font-size: 15px;
+    margin: auto;
+  }
+  
+}
+

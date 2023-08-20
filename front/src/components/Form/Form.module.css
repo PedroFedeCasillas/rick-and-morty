@@ -1,0 +1,248 @@
+.form {
+  background: linear-gradient(#141e30, #243b55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  min-height: 400px;
+}
+.form h1 {
+  /* border: 1px solid red; */
+  font-size: 40px;
+  font-family: "Rampart One", cursive;
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  padding: 0 10px 0 10px;
+  margin-top: 0;
+}
+
+.form .divUser {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 30px 30px 30px;
+}
+.form .divUser label {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  font-family: "Rampart One", cursive;
+  margin-bottom: 10px;
+}
+.form .divUser input {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.824);
+  height: 20px;
+  border-radius: 5px;
+  color: white;
+}
+.form .divUser input:focus {
+  background-color: rgb(0, 0, 0);
+  outline: none;
+
+  color: rgb(255, 255, 255);
+}
+.form .divUser input:-webkit-autofill,
+.form .divUser input:-webkit-autofill:hover,
+.form .divUser input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.479) inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.form .divPass {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+.form .divPass label {
+  font-family: "Rampart One", cursive;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.form .divPass input {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.824);
+  height: 20px;
+  border-radius: 5px;
+  color: white;
+}
+.form .divPass input:focus {
+  background-color: rgb(0, 0, 0);
+  outline: none;
+
+  color: rgb(255, 255, 255);
+}
+.form .divPass input:-webkit-autofill,
+.form .divPass input:-webkit-autofill:hover,
+.form .divPass input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.479) inset !important;
+  box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.479) inset !important;
+}
+
+
+.form .linkBtn {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.702);
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 30px;
+  padding: 5px 15px 8px 15px;
+  border-radius: 5px;
+  border: transparent;
+  transition: 0.3s;
+}
+
+.form .linkBtn:hover {
+  transform: scale(1.1);
+  color: #40aec4;
+  border: 1px solid transparent;
+}
+.form p {
+  color: rgb(255, 4, 4);
+  text-align: start;
+}
+
+.form .divPass .error {
+  border: 2px solid red;
+}
+
+.form .divUser .error {
+  border: 2px solid red;
+}
+
+.divErrores {
+  background-color: rgba(0, 0, 0, 0.659);
+  border: 3px solid rgba(255, 0, 0, 0.479);
+  color: white;
+  font-family: "Poiret One", cursive;
+  width: 290px;
+  height: fit-content;
+  text-align: star;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.divErroresVacio {
+  background-color: transparent;
+  border: transparent;
+}
+.divErrores p {
+  padding: 0px 10px 0px 10px;
+}
+
+/*======>>>boton login<<<======*/
+.botons {
+  position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #03e9f4;
+	font-size: 16px;
+	text-decoration: none;
+	overflow: hidden;
+	transition: .5s;
+	margin-top: 40px;
+	letter-spacing: 4px;
+  border: none;
+  background: transparent;
+ }
+ .botons:hover {
+  background: #03e9f4;
+	color: #fff;
+	border-radius: 5px;
+ }
+ .botons span{
+	position: absolute;
+	display: block;
+}
+.botons span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #03e9f4);
+	animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1{
+	0%{
+		left: -100%;
+	}
+	50%, 100% {
+		left: 100%;
+	}
+}
+.botons span:nth-child(2){
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03e9f4);
+	animation: btn-anim2 1s linear infinite;
+	animation-delay: 5s;
+}
+
+@keyframes btn-anim2{
+	0%{
+		top: -100%;
+	}
+	50%, 100% {
+		top: 100%;
+	}
+}
+.botons span:nth-child(3){
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03e9f4);
+	animation: btn-anim3 1s linear infinite;
+	animation-delay: 3s;
+}
+
+@keyframes btn-anim3{
+	0%{
+		right: -100%;
+	}
+	50%, 100% {
+		right: 100%;
+	}
+}
+.botons span:nth-child(4){
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: btn-anim4 1s linear infinite;
+	animation-delay: 7s;
+}
+
+@keyframes btn-anim4{
+	0%{
+		bottom: -100%;
+	}
+	50%, 100% {
+		bottom: 100%;
+	}
+}
+/*=====>>>hasta acá boton login<<<=====*/
+
+@media screen and (max-width: 768px) {
+  .form h1 {
+    /* border: 1px solid red; */
+    font-size: 30px;
+  }
+}

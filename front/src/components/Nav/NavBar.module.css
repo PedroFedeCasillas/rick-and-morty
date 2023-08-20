@@ -1,0 +1,208 @@
+.nav {
+  background: linear-gradient(#141e30, #243b55);
+  margin: auto;
+  width: 95%;
+  height: 80px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav .divLinks {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.nav .divNavSearch {
+  display: flex;
+  align-items: center;
+}
+.nav .divNavSearch .divSearch {
+  text-align: end;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: end;
+}
+.active {
+  background-color: #141d2e;
+  font-family: Comic Sans MS;
+  font-size: 30px;
+  text-decoration: none;
+  color: #40aec4;
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+.active:hover {
+  color:#fff;
+}
+.disable {
+  font-family: Comic Sans MS;
+  font-size: 30px;
+  text-decoration: none;
+  color: #40aec4;
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+}
+.disable:hover {
+  color:#fff;
+}
+.btnLogout {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  /* right: 80px;
+  top: 27px; */
+  margin-right: 20px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btnLogout button {
+  display: flex;
+  color: white;
+  background-color: #141d2e;
+  border: transparent;
+  font-family: Comic Sans MS;
+  font-size: 18px;
+  padding: 3px 5px 3px 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  margin: 0px 10px 0 0;
+  color: #40aec4;
+}
+
+.btnLogout button:hover {
+  background-color: #1a2a47;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 0px 122px 18px rgba(30,143,148,1);
+  -moz-box-shadow: 0px 0px 122px 18px rgba(30,143,148,1);
+  box-shadow: 0px 0px 122px 18px rgba(30,143,148,1);
+}
+
+@media screen and (max-width: 1050px) {
+  .nav {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 70%;
+    height: 67px;
+  }
+
+  .nav .divLinks {
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 50%; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .active {
+    margin: 0 20px 0 20px;
+  }
+  .disable {
+    margin: 0 20px 0 20px;
+  }
+  .nav .divSearch {
+    height: fit-content;
+    text-align: center;
+    margin: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: end;
+  }
+  .divNavSearch .btnLogout {
+    position: absolute;
+    left: 30px;
+    top: 87px;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    width: 80%;
+    height: 60px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+  .redes {
+    position: fixed;
+  }
+  .active {
+    margin: 0 5px 0 5px;
+    font-size: 25px;
+  }
+  .disable {
+    margin: 0 5px 0 5px;
+    font-size: 25px;
+  }
+  .divNavSearch .btnLogout {
+    top: 80px;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .nav {
+    height: 55px;
+  }
+  .active {
+    margin: 0 5px 0 5px;
+    font-size: 21px;
+  }
+  .disable {
+    margin: 0 5px 0 5px;
+    font-size: 21px;
+  }
+
+  .nav .divLinks {
+
+    margin-bottom: 0px;
+  }
+  .divNavSearch .btnLogout {
+    top: 68px;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav {
+    width: 100vh;
+    /* background: none; */
+    border: none;
+  }
+  .active {
+    margin: 0 5px 0 5px;
+    font-size: 21px;
+  }
+  .disable {
+    margin: 0 5px 0 5px;
+    font-size: 21px;
+  }
+
+  .divNavSearch .btnLogout {
+    top: 65px;
+    left: 30px;
+  }
+}
